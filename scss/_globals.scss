@@ -1,3 +1,74 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+    color: $darkGrey;
+    font-size: 1.125rem; // 18px
+    line-height: 1.75rem; //28px
+
+    @include breakpoint-up(medium){
+        font-size: 1.375rem; // 22px
+        line-height: 2rem; //32px
+    }
+}
+
+// Text styles
+h1, h2, h3 {
+    margin-top: 0;
+    padding: 0;
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: $almostBlack;
+}
+
 h1 {
-    color: blue;
+    font-size: 3.75rem; // 60px
+    line-height: 3.4375rem; // 55px
+
+    @include breakpoint-up(medium){
+        font-size: 4.375rem; // 70px
+        line-height: 4.0625rem; // 65px    
+    } 
+
+    @include breakpoint-up(large){
+        font-size: 6rem; // 96px
+        line-height: 5.5rem; // 88px   
+        color: $white; 
+    }
+}
+
+h2 {
+    font-size: 3.125rem; // 50px
+    line-height: 2.8125rem; // 45px
+
+    @include breakpoint-up(large){
+        font-size: 3.75rem; // 60px
+        line-height: 3.75rem; // 60px
+    }
+}
+
+h3 {
+    font-size: 2rem; // 32px
+    line-height: 2rem; // 32px
+    color: $gold;
+
+    @include breakpoint-up(large){
+        font-size: 2.25rem; // 36px
+        line-height: 2.25rem; // 36px
+    }
+}
+
+.light {
+    color: $white;
 }
