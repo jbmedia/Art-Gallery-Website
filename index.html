@@ -6,19 +6,29 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@900&family=Outfit:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Outfit:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="dist/style.css">
   <title>Frontend Mentor | Art gallery website</title>
 </head>
 <body>
 
-  <h1>Modern Art Gallery</h1>
-
-  The arts in the collection of the Modern Art Gallery all started 
-  from a spark of inspiration. Will these pieces inspire you? Visit 
-  us and find out.
-
-  Our location
+<header class="header">
+  <div class="grid">
+    <div class="header__img"></div>
+    <div class="header__intro container-mobile">
+        <h1 class="header__title">Modern <br>Art Gallery</h1>
+        <p class="header__text">
+          The arts in the collection of the Modern Art Gallery all started 
+          from a spark of inspiration. Will these pieces inspire you? Visit 
+          us and find out.
+        </p>
+        <a class="header__button">
+          <div class="button__text header__button__text light">Our location</div>
+          <div class="header__button__arrow"><img src="/images/icon-arrow-right.svg"></div>
+        </a>
+    </div>
+  </div>
+</header>
 
   Your day at the gallery
 
@@ -27,7 +37,7 @@
 
   Come &amp; be inspired
 
-  We’re excited to welcome you to our gallery and see how our collections 
+  We are excited to welcome you to our gallery and see how our collections 
   influence you.
 
   Modern Art Gallery

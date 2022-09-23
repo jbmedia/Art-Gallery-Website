@@ -1,0 +1,122 @@
+.header {
+
+    @include breakpoint-up(large){
+        background: linear-gradient(
+            to left, 
+            #ffffff 0%, 
+            #ffffff 50%, 
+            $almostBlack 50%, 
+            $almostBlack 100%
+          );
+        height: 43.75rem; // 700px
+    }
+
+    &__img {
+        background-image: url(/images/desktop/image-hero.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center 60%;
+        width: auto;
+        height: 15rem; // 240px
+        margin-bottom: 2.1875rem; // 35px;
+
+        @include breakpoint-up(medium){
+            grid-column: 1/8;
+            grid-row: 1;
+            height: 43.75rem; // 700px
+        }
+
+        @include breakpoint-up(large){
+            grid-column: 4/10;
+        }
+    }
+
+    &__intro {
+
+
+        @include breakpoint-up(medium){
+            grid-column: 7/13;
+            grid-row: 1;
+            align-self: center;
+            padding-right: 2.4375rem; // 39px
+        }
+
+        @include breakpoint-up(large){
+            grid-column: 1/13;
+            padding-right: 0;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 1fr 1fr;
+            gap: 0 1.875rem; // 30px
+        }
+    }
+
+    &__title {
+        margin-bottom: 2.25rem; // 36px
+        
+
+        @include breakpoint-up(large){
+            grid-column: 1/7;
+            grid-row: 1/2;
+        }
+    }
+
+    &__text {
+        margin-bottom: 2.4375rem; // 39px
+
+        @include breakpoint-up(large){
+            grid-column: 9/13;
+            grid-row: 1/2;
+            margin-bottom: 0;
+        }
+    }
+
+    &__button {
+        height: 4.5rem; // 72px
+        margin-bottom: 8.4375rem; // 135px
+        display: flex;
+
+        @include breakpoint-up(medium){
+            margin-bottom: 0;
+        }
+
+        @include breakpoint-up(large){
+            grid-column: 9/13;
+            grid-row: 2/3;
+        }
+        
+
+        &__text {
+            background-color: $almostBlack;
+            font-weight: 800;
+            font-size: 1.25rem; // 20px
+            letter-spacing: 0.2275rem; // 3.64px
+            display: flex;
+            align-items: center;
+            padding-left: 2.1875rem; // 35px
+            padding-right: 2.1875rem; // 35px
+            transition: background-color 300ms ease-in-out;
+        }
+
+        &__arrow {
+            background-color: $gold;
+            display: flex;
+            align-items: center;
+            padding-left: 1.5rem; // 24px
+            padding-right: 1.5rem; // 24px
+            transition: background-color 300ms ease-in-out;
+        }
+
+        &:hover {
+
+            .header__button__text {
+                background-color: $gold;
+                color: $white;
+            }
+
+            .header__button__arrow {
+                background-color: $almostBlack;
+            }
+        }
+    }
+}
