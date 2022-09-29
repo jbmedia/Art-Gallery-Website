@@ -1,0 +1,73 @@
+.footer {
+
+    padding: 3rem 2.8125rem; // 48px 45px
+
+    &__grid {
+
+        @include breakpoint-up(medium){
+            display: grid;
+            margin: 0 auto;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 0.6875rem; // 11px
+        }
+    
+        @include breakpoint-up(large){
+            align-self: center;
+            max-width: 1110px;
+            gap: 1.875rem; // 30px
+        }
+    }
+
+    &__logo {
+        margin-bottom: 2.8125rem; // 45px
+
+        @include breakpoint-up(medium){
+            grid-column: 1/2;
+            margin-bottom: 0;
+        }
+    }
+
+    &__text {
+        font-size: 1rem; // 16px
+        line-height: 1.625rem; //26px
+        margin-bottom: 2.8125rem; // 45px
+
+        @include breakpoint-up(medium){
+            grid-column: 3/7;
+            margin-bottom: 0;
+        }
+    }
+
+    &__social {
+
+        @include breakpoint-up(medium){
+            grid-column: 9/13;
+            justify-self: end;
+        }
+
+        &__icon {
+   
+        display: inline-block;
+        
+
+            svg path {
+                transition: fill 150ms ease-in-out;
+            }
+
+            &:hover svg path {
+                fill: $gold;
+            }
+        }
+
+        &__icon--dark {
+    
+                &:hover svg path {
+                    fill: $white;
+                }
+            }
+
+        &__icon:not(:last-child){
+            padding-right: 1.25rem; // 20px
+        }
+    }
+}

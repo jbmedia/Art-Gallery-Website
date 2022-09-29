@@ -1,0 +1,90 @@
+.main {
+
+    margin-bottom: 8.4375rem; // 135px
+
+    &__image-1 {
+        background-image: url(/images/mobile/image-grid-1@2x.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 20rem; // 320px
+        width: auto;
+        background-position-y: bottom;
+        margin-bottom: 1.5625rem; // 25px
+
+        @include breakpoint-up(medium){
+            grid-column: 6/13;
+            grid-row: 1/2;
+            background-image: url(/images/tablet/image-grid-1@2x.jpg);
+            height: 100%;
+            margin-bottom: 0.6875rem; // 11px
+        }
+    }
+
+    &__image-2 {
+        background-image: url(/images/mobile/image-grid-2@2x.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 30rem; // 480px
+        width: auto;
+        background-position-y: bottom;
+        margin-bottom: 1rem; // 16px
+            
+        @include breakpoint-up(medium){
+            grid-column: 1/8;
+            grid-row: 2/4;
+            background-image: url(/images/tablet/image-grid-2@2x.jpg);
+            height: 100%;
+            margin-bottom: 0;
+            }
+    }
+
+    &__image-3 {
+        background-image: url(/images/mobile/image-grid-3@2x.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 12.5rem; // 200px
+        width: auto;
+        background-position-y: bottom;
+        margin-bottom: 1rem; // 16px
+
+        @include breakpoint-up(medium){
+            grid-column: 8/13;
+            grid-row: 2/3;
+            background-image: url(/images/tablet/image-grid-3@2x.jpg);
+            height: 100%;
+            margin-bottom: 0;
+            }
+    }
+
+    &__inspired {
+        padding: 3rem 1.5rem; // 48px 24px
+
+        @include breakpoint-up(medium){
+            padding: 5.3125rem 1.8125rem; // 85px 29px
+        }
+
+        @include breakpoint-up(large){
+            padding: 4rem 3.125rem; // 64px 50px
+        }
+
+        > p {
+            margin-bottom: 0;
+        }
+    }
+
+    &__text-1 {
+
+        @include breakpoint-up(medium){
+            grid-column: 1/6;
+            grid-row: 1/2;
+        }
+    }
+
+    &__text-2 {
+        
+        @include breakpoint-up(medium){
+            grid-column: 8/13;
+            grid-row: 3/4;
+        }
+    }
+}

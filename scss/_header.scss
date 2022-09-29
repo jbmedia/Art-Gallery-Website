@@ -1,5 +1,15 @@
 .header {
 
+    margin-bottom: 8.4375rem; // 135px
+
+    @include breakpoint-up(medium){
+        margin-bottom: 7.5rem; // 120px
+    }
+
+    @include breakpoint-up(medium){
+        margin-bottom: 11.25rem; // 180px
+    }
+
     @include breakpoint-up(large){
         background: linear-gradient(
             to left, 
@@ -11,22 +21,41 @@
         height: 43.75rem; // 700px
     }
 
+    &__grid {
+
+        @include breakpoint-up(medium){
+            display: grid;
+            margin: 0 auto;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 1fr auto;
+            max-width: 1110px;
+            gap: 0.625rem; // 10px
+        }
+        
+        @include breakpoint-up(large){
+            align-self: center;
+            gap: 1.875rem; // 30px
+        }
+    }
+
     &__img {
-        background-image: url(/images/desktop/image-hero.jpg);
+        background-image: url(/images/mobile/image-hero@2x.jpg);
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: center 60%;
         width: auto;
         height: 15rem; // 240px
         margin-bottom: 2.1875rem; // 35px;
 
         @include breakpoint-up(medium){
+            background-image: url(/images/tablet/image-hero@2x.jpg);
             grid-column: 1/8;
             grid-row: 1;
             height: 43.75rem; // 700px
+            margin-bottom: 0;
         }
 
         @include breakpoint-up(large){
+            background-image: url(/images/desktop/image-hero@2x.jpg);
             grid-column: 4/10;
         }
     }
@@ -73,7 +102,6 @@
 
     &__button {
         height: 4.5rem; // 72px
-        margin-bottom: 8.4375rem; // 135px
         display: flex;
 
         @include breakpoint-up(medium){

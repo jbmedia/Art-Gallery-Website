@@ -1,0 +1,53 @@
+.location {
+
+    &__map {
+        background-image: url(/images/mobile/image-map@2x.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: auto; // 375px
+        height: 34.375rem; // 550px
+
+        @include breakpoint-up(medium){
+            background-image: url(/images/tablet/image-map@2x.png);
+            height: 37.5rem; // 600px
+        }
+
+        @include breakpoint-up(large){
+            background-image: url(/images/desktop/image-map@2x.png);
+        }
+    }
+
+    &__header {
+        font-size: 3.125rem; // 50px
+        padding-top: 3rem; // 48px
+
+        @include breakpoint-up(medium){
+            font-size: 3.4375rem; // 55px
+        }
+
+        @include breakpoint-up(large){
+            font-size: 3.4375rem; // 70px
+        }
+    }
+
+    &__address {
+        font-style: normal;
+        margin-bottom: 1.5rem; // 24px
+    }
+
+    &__street {
+        color: $gold;
+        font-size: 2rem; // 32px
+        margin-bottom: 2rem; // 32px
+    }
+
+    &__text {
+        margin: 0;
+        padding-bottom: 3rem; // 48px
+    }
+
+    &__footer {
+        background-color: $gold;
+    }
+}
+
