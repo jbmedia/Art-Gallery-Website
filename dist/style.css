@@ -450,6 +450,7 @@ li {
 @media (min-width: 64em) {
   .location__map {
     background-image: url(/images/desktop/image-map@2x.png);
+    height: 61rem;
   }
 }
 .location__button {

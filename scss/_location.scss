@@ -16,6 +16,7 @@
 
         @include breakpoint-up(large){
             background-image: url(/images/desktop/image-map@2x.png);
+            height: 61rem; // 600px
         }
     }
 
