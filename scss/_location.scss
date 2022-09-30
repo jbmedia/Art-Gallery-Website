@@ -1,5 +1,7 @@
 .location {
 
+    background-color: $almostBlack;
+
     &__map {
         background-image: url(/images/mobile/image-map@2x.png);
         background-size: cover;
@@ -17,16 +19,98 @@
         }
     }
 
-    &__header {
+    &__button {
+        height: 4.5rem; // 72px
+        display: flex;
+
+        @include breakpoint-up(medium){
+            margin-bottom: 0;
+            grid-column: 1/13;
+        }
+
+        @include breakpoint-up(large){
+        }
+        
+
+        &__text {
+            background-color: $almostBlack;
+            font-weight: 800;
+            font-size: 1.25rem; // 20px
+            letter-spacing: 0.2275rem; // 3.64px
+            display: flex;
+            align-items: center;
+            padding-left: 2.1875rem; // 35px
+            padding-right: 2.1875rem; // 35px
+            transition: background-color 300ms ease-in-out;
+        }
+
+        &__arrow {
+            background-color: $gold;
+            display: flex;
+            align-items: center;
+            padding-left: 1.5rem; // 24px
+            padding-right: 1.5rem; // 24px
+            transition: background-color 300ms ease-in-out;
+        }
+
+        &:hover {
+
+            .header__button__text {
+                background-color: $gold;
+                color: $white;
+            }
+
+            .header__button__arrow {
+                background-color: $almostBlack;
+            }
+        }
+    }
+
+    &__grid {
+
+        @include breakpoint-up(medium){
+            display: grid;
+            margin: 0 auto;
+            padding: 5.375rem 2.4375rem; // 86px 39px
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 1fr auto;
+            max-width: 1110px;
+            gap: 0.625rem; // 10px
+        }
+        
+        @include breakpoint-up(large){
+            align-self: center;
+            gap: 1.875rem; // 30px
+            padding: 6.5rem 0 8rem 0; // 104px 0 128px 0
+        }
+
+        &--map {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+
+    &__heading {
         font-size: 3.125rem; // 50px
         padding-top: 3rem; // 48px
 
         @include breakpoint-up(medium){
             font-size: 3.4375rem; // 55px
+            grid-column: 1/5;
+            align-self: top;
+            padding-top: 0;
         }
 
         @include breakpoint-up(large){
             font-size: 3.4375rem; // 70px
+        }
+    }
+
+    &__description {
+
+        @include breakpoint-up(medium){
+        grid-column: 6/13;
+        align-self: top;
         }
     }
 
@@ -44,6 +128,10 @@
     &__text {
         margin: 0;
         padding-bottom: 3rem; // 48px
+        
+        @include breakpoint-up(medium){
+            padding-bottom: 0;
+        }
     }
 
     &__footer {

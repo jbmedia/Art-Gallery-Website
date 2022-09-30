@@ -14,18 +14,32 @@
 <body>
 <section class="location">
 
-  <div class="location__map"></div>
+  <div class="location__map">
+    <div class="location__grid location__grid--map">
+      <a class="location__button" href="/">
+        <div class="header__button__arrow"><img src="/images/icon-arrow-left.svg"></div>
+        <div class="button__text header__button__text light">Back to home</div>
+      </a>
+    </div>
+  </div>
+
   <div class="container-mobile dark">
-    <h1 class="location__header dark">Our location</h1>
-    <address class="location__address">
-      <h2 class="location__street">99 King Street</h2>
-      Newport<br>
-      RI 02840<br>
-      United States of America<br>
-    </address>
-    <p class="location__text">Our newly opened gallery is located near the Edward King House on 99 King 
-    Street, the Modern Art Gallery is free to all visitors and open seven days 
-    a week from 8am to 9pm.</p>
+    <div class="location__grid">
+      <h1 class="location__heading dark">Our location</h1>
+      <div class="location__description">
+        <address class="location__address">
+          <h2 class="location__street">99 King Street</h2>
+          Newport<br>
+          RI 02840<br>
+          United States of America<br>
+        </address>
+        <p class="location__text">
+          Our newly opened gallery is located near the Edward King House on 99 King 
+          Street, the Modern Art Gallery is free to all visitors and open seven days 
+          a week from 8am to 9pm.
+        </p>
+      </div>
+    </div>
   </div>
 </section>
 
